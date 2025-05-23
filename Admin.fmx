@@ -1,0 +1,217 @@
+object AdminForm: TAdminForm
+  Left = 341
+  Top = 106
+  BorderStyle = ToolWindow
+  Caption = 'Admin Panel'
+  ClientHeight = 480
+  ClientWidth = 640
+  Fill.Color = xD2D2D2D2
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  Left = 341
+  Top = 106
+  DesignerMasterStyle = 0
+  object Tabs: TTabControl
+    Position.X = 23.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 594.000000000000000000
+    Size.Height = 385.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    OnChange = TabsChange
+    Sizes = (
+      594s
+      359s
+      594s
+      359s
+      594s
+      359s
+      594s
+      359s
+      594s
+      359s)
+    object TabAbout: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 53.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'About'
+      ExplicitSize.cx = 53.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object LabelSoftwareName: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 22.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        Text = 'Project JT'
+        TabOrder = 0
+      end
+      object LabelVersion: TLabel
+        Position.X = 24.000000000000000000
+        Position.Y = 74.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Version 1'
+        TabOrder = 1
+      end
+      object LabelDevName: TLabel
+        Position.X = 24.000000000000000000
+        Position.Y = 57.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'J.J Ramac'
+        TabOrder = 2
+      end
+    end
+    object TabEvent: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 123.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Event Management'
+      ExplicitSize.cx = 123.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object ListViewEvent: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Position.X = 24.000000000000000000
+        Position.Y = 56.000000000000000000
+        Size.Width = 545.000000000000000000
+        Size.Height = 281.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnItemClick = ListViewEventItemClick
+      end
+      object BtnAddEvent: TButton
+        Position.X = 24.000000000000000000
+        Position.Y = 26.000000000000000000
+        TabOrder = 1
+        Text = 'Add Event'
+        TextSettings.Trimming = None
+        OnClick = BtnAddEventClick
+      end
+      object BtnEditEvent: TButton
+        Position.X = 112.000000000000000000
+        Position.Y = 26.000000000000000000
+        TabOrder = 2
+        Text = 'Edit Event'
+        TextSettings.Trimming = None
+        OnClick = BtnEditEventClick
+      end
+      object BtnDeleteEvent: TButton
+        Position.X = 200.000000000000000000
+        Position.Y = 26.000000000000000000
+        TabOrder = 3
+        Text = 'Delete'
+        TextSettings.Trimming = None
+        OnClick = BtnDeleteEventClick
+      end
+      object BtnRefresh: TButton
+        Position.X = 288.000000000000000000
+        Position.Y = 26.000000000000000000
+        TabOrder = 4
+        Text = 'Refresh'
+        TextSettings.Trimming = None
+        OnClick = BtnRefreshClick
+      end
+    end
+    object TabUsers: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 118.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'User Management'
+      ExplicitSize.cx = 118.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+    object TabLogs: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 45.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Logs'
+      ExplicitSize.cx = 45.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+    object TabSettings: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 63.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Settings'
+      ExplicitSize.cx = 63.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 56.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object LabelTitle: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 23.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 362.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      Text = 'Administrative Management Panel'
+      TabOrder = 0
+    end
+    object BtnLogout: TButton
+      Position.X = 537.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 1
+      Text = 'Logout'
+      TextSettings.Trimming = None
+      OnClick = BtnLogoutClick
+    end
+  end
+  object FDQuery1: TFDQuery
+    Left = 432
+    Top = 16
+  end
+end

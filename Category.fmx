@@ -1,0 +1,77 @@
+object CategoryForm: TCategoryForm
+  Left = 0
+  Top = 0
+  BorderStyle = ToolWindow
+  Caption = 'Categories'
+  ClientHeight = 480
+  ClientWidth = 640
+  Fill.Color = xD2D2D2D2
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 56.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LabelEventTitle: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 23.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 362.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TabOrder = 0
+    end
+  end
+  object ListViewCategory: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Position.X = 32.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 577.000000000000000000
+    Size.Height = 345.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object BtnAddCategory: TButton
+    Position.X = 32.000000000000000000
+    Position.Y = 74.000000000000000000
+    TabOrder = 2
+    Text = 'Add'
+    TextSettings.Trimming = None
+    OnClick = BtnAddCategoryClick
+  end
+  object BtnEditCategory: TButton
+    Position.X = 120.000000000000000000
+    Position.Y = 74.000000000000000000
+    TabOrder = 3
+    Text = 'Edit'
+    TextSettings.Trimming = None
+  end
+  object BtnDeleteCategory: TButton
+    Position.X = 208.000000000000000000
+    Position.Y = 74.000000000000000000
+    TabOrder = 4
+    Text = 'Delete'
+    TextSettings.Trimming = None
+    OnClick = BtnDeleteCategoryClick
+  end
+  object BtnRefresh: TButton
+    Position.X = 296.000000000000000000
+    Position.Y = 74.000000000000000000
+    TabOrder = 7
+    Text = 'Refresh'
+    TextSettings.Trimming = None
+    OnClick = BtnRefreshClick
+  end
+  object FDQuery1: TFDQuery
+    Left = 488
+    Top = 64
+  end
+end
